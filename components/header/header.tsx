@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IconButton from "./icon-button";
+import IconButton from "../icon-button";
 import LocationButton from "./location-button";
 
 export default function Header() {
