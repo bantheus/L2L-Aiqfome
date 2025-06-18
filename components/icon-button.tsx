@@ -1,24 +1,14 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import type { ButtonHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  icon: string;
-  alt: string;
-  width?: number;
-  height?: number;
+  icon: ReactNode;
+  "aria-label": string;
 };
 
-function IconButton({
-  icon,
-  alt,
-  width,
-  height,
-  className,
-  ...props
-}: IconButtonProps) {
+function IconButton({ icon, className, ...props }: IconButtonProps) {
   return (
     <button
       className={cn(
@@ -27,13 +17,7 @@ function IconButton({
       )}
       {...props}
     >
-      <Image
-        src={icon}
-        alt={alt}
-        width={width || 24}
-        height={height || 24}
-        className="object-contain"
-      />
+      {icon}
     </button>
   );
 }
