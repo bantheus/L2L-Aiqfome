@@ -20,7 +20,7 @@ function RestaurantTitle({ restaurantData }: RestaurantTitleProps) {
           quality={100}
           className="rounded-md object-contain"
         />
-        <h1 className="text-xl font-extrabold text-neutral-900">
+        <h1 className="text-xl/tight font-extrabold text-balance text-neutral-900">
           {restaurantData.name}
         </h1>
       </div>
