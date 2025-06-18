@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${nunito.className} antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

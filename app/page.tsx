@@ -24,7 +24,7 @@ export default function Home() {
         <RestaurantList title="abertos" restaurants={openRestaurants} />
       </div>
 
-      <div className="mt-6">
+      <div className="my-6">
         <RestaurantList title="fechados" restaurants={closedRestaurants} />
       </div>
     </>
