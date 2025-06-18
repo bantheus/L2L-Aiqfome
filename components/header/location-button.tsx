@@ -1,5 +1,6 @@
 "use client";
 
+import { MapPinIcon } from "lucide-react";
 import Image from "next/image";
 
 interface LocationButtonProps {
@@ -12,13 +13,7 @@ function LocationButton({ address }: LocationButtonProps) {
       aria-label="Selecionar local de entrega"
       className="flex items-center gap-2 rounded-md transition hover:opacity-80 focus:ring-2 focus:ring-white focus:outline-none"
     >
-      <Image
-        src="/icons/map-pin-icon.svg"
-        alt=""
-        width={24}
-        height={24}
-        className="object-contain"
-      />
+      <MapPinIcon size={20} />
       <div className="flex flex-col text-left">
         <span className="text-light text-xs font-medium">Entregando em</span>
         <span className="flex items-center gap-1 font-bold">
