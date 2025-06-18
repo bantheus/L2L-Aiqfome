@@ -8,6 +8,11 @@ interface Restaurant {
   imageSrc: string;
   name: string;
   deliveryFee: number;
+  deliveryTime: string;
+  freeDeliveryAbove: number;
   rating: number;
+  closingTime: string;
+  minOrder: number;
   isOpen: boolean;
+  distance: string;
 }

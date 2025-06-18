@@ -6,6 +6,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.7,
     isOpen: true,
     deliveryFee: 0,
+    closingTime: "14:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "2",
@@ -14,6 +19,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.3,
     isOpen: true,
     deliveryFee: 6,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "3",
@@ -22,6 +32,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.8,
     isOpen: true,
     deliveryFee: 0,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "4",
@@ -30,6 +45,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.5,
     isOpen: true,
     deliveryFee: 7.3,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "5",
@@ -38,6 +58,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.2,
     isOpen: true,
     deliveryFee: 13.0,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "6",
@@ -46,6 +71,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.6,
     isOpen: true,
     deliveryFee: 0,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "7",
@@ -54,6 +84,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.5,
     isOpen: false,
     deliveryFee: 7.3,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "8",
@@ -62,6 +97,11 @@ const RestaurantData: Restaurant[] = [
     rating: 4.2,
     isOpen: false,
     deliveryFee: 13.0,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
   {
     id: "9",
@@ -70,9 +110,18 @@ const RestaurantData: Restaurant[] = [
     rating: 4.6,
     isOpen: false,
     deliveryFee: 0,
+    closingTime: "22:00",
+    deliveryTime: "30-40 min",
+    freeDeliveryAbove: 50,
+    minOrder: 20,
+    distance: "2.5 km",
   },
 ];
 
 export const getRestaurantData = (): Restaurant[] => {
   return RestaurantData;
+};
+
+export const getRestaurantDataById = (id: string): Restaurant | undefined => {
+  return RestaurantData.find((restaurant) => restaurant.id === id);
 };

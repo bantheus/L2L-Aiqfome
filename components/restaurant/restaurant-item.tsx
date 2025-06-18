@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface RestaurantItemProps {
   restaurant: Restaurant;
@@ -6,7 +7,10 @@ interface RestaurantItemProps {
 
 function RestaurantItem({ restaurant }: RestaurantItemProps) {
   return (
-    <div
+    <Link
+      href={`/restaurantes/${restaurant.id}`}
+      prefetch={false}
+      aria-label={`Ir para o restaurante ${restaurant.name}`}
       className={`flex min-h-[72px] w-full items-stretch ${restaurant.isOpen ? "" : "opacity-60"}`}
     >
       <div className="relative min-h-[72px] min-w-[72px]">
@@ -71,7 +75,7 @@ function RestaurantItem({ restaurant }: RestaurantItemProps) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
