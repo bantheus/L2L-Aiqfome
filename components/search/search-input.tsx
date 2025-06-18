@@ -1,3 +1,4 @@
+import { SearchIcon } from "lucide-react";
 import IconButton from "../icon-button";
 import { Input } from "../ui/input";
 
@@ -12,8 +13,7 @@ function SearchInput() {
         />
         <div className="absolute inset-y-0 left-3 flex items-center">
           <IconButton
-            icon="/icons/search-icon.svg"
-            alt="Pesquisar"
+            icon={<SearchIcon size={20} className="text-muted-foreground" />}
             aria-label="Pesquisar por loja ou culinária"
           />
         </div>
