@@ -15,7 +15,7 @@ function RestaurantItem({ restaurant }: RestaurantItemProps) {
     >
       <div className="relative min-h-[72px] min-w-[72px]">
         <Image
-          src={restaurant.imageSrc}
+          src={restaurant.logoUrl}
           alt={`Imagem do restaurante ${restaurant.name}`}
           fill
           className="rounded-l-md object-cover"

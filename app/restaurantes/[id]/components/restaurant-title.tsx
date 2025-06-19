@@ -2,10 +2,7 @@ import { ChevronRightIcon, HeartIcon, Share2Icon } from "lucide-react";
 import Image from "next/image";
 
 interface RestaurantTitleProps {
-  restaurantData: {
-    imageSrc: string;
-    name: string;
-  };
+  restaurantData: Restaurant;
 }
 
 function RestaurantTitle({ restaurantData }: RestaurantTitleProps) {
@@ -13,7 +10,7 @@ function RestaurantTitle({ restaurantData }: RestaurantTitleProps) {
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <Image
-          src={restaurantData.imageSrc}
+          src={restaurantData.logoUrl}
           alt={`Restaurante ${restaurantData.name}`}
           width={36}
           height={36}

@@ -1,5 +1,5 @@
 import NotFound from "@/components/not-found";
-import { getRestaurantDataById } from "@/mock/restaurant";
+import { getRestaurantById } from "@/mock/mock";
 import RestaurantInfos from "./components/restaurant-infos";
 import RestaurantTitle from "./components/restaurant-title";
 
@@ -9,7 +9,7 @@ export default async function RestaurantPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const restaurantData = getRestaurantDataById(id);
+  const restaurantData = getRestaurantById(id);
 
   if (!restaurantData) {
     return (

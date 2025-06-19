@@ -1,12 +1,12 @@
 import PromotionalBanner from "@/components/banners/promotional-banner";
 import RestaurantList from "@/components/restaurant/restaurant-list";
 import SearchInput from "@/components/search/search-input";
+import { getRestaurants } from "@/mock/mock";
 import { getPromotionalBannerData } from "@/mock/promotional-banner";
-import { getRestaurantData } from "@/mock/restaurant";
 
 export default function Home() {
   const bannerData = getPromotionalBannerData();
-  const allRestaurants = getRestaurantData();
+  const allRestaurants = getRestaurants();
   const openRestaurants = allRestaurants.filter((r) => r.isOpen);
   const closedRestaurants = allRestaurants.filter((r) => !r.isOpen);
 
