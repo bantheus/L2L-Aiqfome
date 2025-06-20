@@ -16,7 +16,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -24,6 +24,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -72,7 +173,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -84,6 +186,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -123,7 +230,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -134,6 +240,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -160,8 +267,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -173,6 +279,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -255,7 +366,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -263,6 +374,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -311,7 +523,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -323,6 +536,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -362,7 +580,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -373,6 +590,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -399,8 +617,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -412,6 +629,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -494,7 +716,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -502,6 +724,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -550,7 +873,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -562,6 +886,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -601,7 +930,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -612,6 +940,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -638,8 +967,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -651,6 +979,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -733,7 +1066,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -741,6 +1074,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -789,7 +1223,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -801,6 +1236,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -840,7 +1280,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -851,6 +1290,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -877,8 +1317,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -890,6 +1329,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -972,7 +1416,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -980,6 +1424,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -1028,7 +1573,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -1040,6 +1586,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -1079,7 +1630,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -1090,6 +1640,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -1116,8 +1667,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -1129,6 +1679,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -1211,7 +1766,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -1219,6 +1774,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -1267,7 +1923,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -1279,6 +1936,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -1318,7 +1980,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -1329,6 +1990,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -1355,8 +2017,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -1368,6 +2029,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -1450,7 +2116,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -1458,6 +2124,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -1506,7 +2273,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -1518,6 +2286,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -1557,7 +2330,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -1568,6 +2340,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -1594,8 +2367,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -1607,6 +2379,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -1689,7 +2466,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -1697,6 +2474,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -1745,7 +2623,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -1757,6 +2636,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -1796,7 +2680,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -1807,6 +2690,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -1833,8 +2717,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -1846,6 +2729,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -1928,7 +2816,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -1936,6 +2824,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -1984,7 +2973,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -1996,6 +2986,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -2035,7 +3030,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -2046,6 +3040,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -2072,8 +3067,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -2085,6 +3079,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [
@@ -2167,7 +3166,7 @@ const mockedData = [
       {
         id: "cat-niguiris",
         name: "Niguiris",
-        description: "Deliciosos niguiris com peixe fresco e arroz temperado.",
+        description: "deliciosos niguiris com peixe fresco e arroz temperado.",
         dishes: [
           {
             id: "dish-niguiri-salmao",
@@ -2175,6 +3174,107 @@ const mockedData = [
             description:
               "Dupla de niguiris de salmão fresco sobre arroz temperado.",
             imageUrl: "/dishes/niguiri-salmao.webp",
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+                promoPrice: 12.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-salmao-hot",
+            name: "Niguiri Apimentado",
+            description:
+              "Dupla de niguiris de salmão fresco sobre arroz temperado e molho apimentado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isSpicy: true,
+            sizes: [
+              {
+                name: "Porção (2 unidades)",
+                price: 14.9,
+              },
+            ],
+            accompaniments: [
+              {
+                id: "acc-shoyu",
+                name: "Shoyu Tradicional",
+                price: 0.0,
+              },
+              {
+                id: "acc-gengibre",
+                name: "Gengibre em Conserva",
+                price: 0.0,
+              },
+              {
+                id: "acc-wasabi",
+                name: "Wasabi",
+                price: 0.0,
+              },
+            ],
+            extras: [
+              {
+                id: "extra-salmao",
+                name: "Mais Salmão",
+                price: 6.0,
+              },
+              {
+                id: "extra-arroz",
+                name: "Mais Arroz",
+                price: 3.0,
+              },
+            ],
+            cutlery: [
+              {
+                id: "cutlery-chopsticks",
+                name: "Hashis",
+                price: 0.0,
+              },
+            ],
+          },
+          {
+            id: "dish-niguiri-veg",
+            name: "Niguiri Vegetariano",
+            description:
+              "Dupla de niguiris vegetarianos com abacate e pepino sobre arroz temperado.",
+            imageUrl: "/dishes/niguiri-salmao.webp",
+            isVegetarian: true,
             sizes: [
               {
                 name: "Porção (2 unidades)",
@@ -2223,7 +3323,8 @@ const mockedData = [
       {
         id: "cat-ceviches",
         name: "Ceviches",
-        description: "Frescor e sabor no melhor estilo peruano-japonês.",
+        description:
+          "um prato super refrescante de peixe fatiado e marinado com limão",
         dishes: [
           {
             id: "dish-ceviche-salmao",
@@ -2235,6 +3336,11 @@ const mockedData = [
               {
                 name: "Porção Individual",
                 price: 28.9,
+                promoPrice: 24.9,
+              },
+              {
+                name: "Porção Grande",
+                price: 49.9,
               },
             ],
             accompaniments: [
@@ -2274,7 +3380,6 @@ const mockedData = [
       {
         id: "cat-bebidas",
         name: "Bebidas",
-        description: "Para acompanhar sua refeição, escolha uma bebida gelada.",
         dishes: [
           {
             id: "dish-coca-lata",
@@ -2285,6 +3390,7 @@ const mockedData = [
               {
                 name: "350ml",
                 price: 6.0,
+                promoPrice: 5.0,
               },
             ],
             accompaniments: [],
@@ -2311,8 +3417,7 @@ const mockedData = [
       {
         id: "cat-sobremesas",
         name: "Sobremesas",
-        description:
-          "Doces perfeitos para fechar sua refeição com chave de ouro.",
+
         dishes: [
           {
             id: "dish-harumaki-banana",
@@ -2324,6 +3429,11 @@ const mockedData = [
               {
                 name: "Porção (2 unidades)",
                 price: 12.9,
+              },
+              {
+                name: "Porção (4 unidades)",
+                price: 22.9,
+                promoPrice: 19.9,
               },
             ],
             accompaniments: [

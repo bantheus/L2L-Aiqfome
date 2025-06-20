@@ -1,6 +1,7 @@
 import NotFound from "@/components/not-found";
 import { getRestaurantById } from "@/mock/mock";
 import RestaurantInfos from "./components/restaurant-infos";
+import RestaurantMenu from "./components/restaurant-menu";
 import RestaurantTitle from "./components/restaurant-title";
 
 export default async function RestaurantPage({
@@ -27,6 +28,8 @@ export default async function RestaurantPage({
     <div className="flex flex-col gap-1.5 p-4">
       <RestaurantTitle restaurantData={restaurantData} />
       <RestaurantInfos restaurantData={restaurantData} />
+
+      <RestaurantMenu categories={restaurantData.categories} />
     </div>
   );
 }

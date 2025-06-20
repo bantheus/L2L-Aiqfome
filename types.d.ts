@@ -22,7 +22,7 @@ interface Restaurant {
 interface Category {
   id: string;
   name: string;
-  description: string;
+  description?: string;
   dishes: Dish[];
 }
 
@@ -31,6 +31,8 @@ interface Dish {
   name: string;
   description: string;
   imageUrl: string;
+  isSpicy?: boolean;
+  isVegetarian?: boolean;
   sizes: Size[];
   accompaniments: Accompaniment[];
   extras: Extra[];
@@ -40,6 +42,7 @@ interface Dish {
 interface Size {
   name: string;
   price: number;
+  promoPrice?: number;
 }
 
 interface Accompaniment {

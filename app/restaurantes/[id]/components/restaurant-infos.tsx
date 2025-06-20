@@ -6,9 +6,28 @@ interface RestaurantInfosProps {
   restaurantData: Restaurant;
 }
 
-function RestaurantInfos({ restaurantData }: RestaurantInfosProps) {
+function DeliveryFee({ fee }: { fee: number }) {
   return (
-    <div
+    <span className="text-sm font-bold">
+      {fee === 0 ? "grátis" : formatCurrency(fee)}
+    </span>
+  );
+}
+
+function RestaurantInfos({ restaurantData }: RestaurantInfosProps) {
+  const {
+    deliveryFee,
+    deliveryTime,
+    distance,
+    freeDeliveryAbove,
+    rating,
+    isOpen,
+    closingTime,
+    minOrder,
+  } = restaurantData;
+
+  return (
+    <section
       className="flex flex-col gap-1"
       aria-label="Informações do restaurante"
     >
@@ -18,29 +37,30 @@ function RestaurantInfos({ restaurantData }: RestaurantInfosProps) {
           title="Taxa de entrega"
         >
           <BikeIcon size={20} aria-hidden />
-          <span className="text-sm font-bold">
-            {restaurantData.deliveryFee === 0
-              ? "grátis"
-              : formatCurrency(restaurantData.deliveryFee)}
-          </span>
+          <DeliveryFee fee={deliveryFee} />
           <ChevronRightIcon size={12} aria-hidden />
         </div>
 
         <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-500">
-          <span className="text-neutral-400">•</span>
-          <span>{`hoje, ${restaurantData.deliveryTime}`}</span>
-          <span className="text-neutral-400">•</span>
-          <p>{restaurantData.distance}</p>
+          <span className="text-neutral-400" aria-hidden>
+            •
+          </span>
+          <span>{`hoje, ${deliveryTime}`}</span>
+          <span className="text-neutral-400" aria-hidden>
+            •
+          </span>
+          <span>{distance}km</span>
         </div>
       </div>
 
-      <Badge
-        className="bg-teal-50 px-2 py-1.5 font-bold text-teal-600"
-        aria-label={`Entrega grátis acima de ${formatCurrency(restaurantData.freeDeliveryAbove)}`}
-      >
-        entrega grátis acima de{" "}
-        {formatCurrency(restaurantData.freeDeliveryAbove)}
-      </Badge>
+      {freeDeliveryAbove > 0 && (
+        <Badge
+          className="bg-teal-50 px-2 py-1.5 font-bold text-teal-600"
+          aria-label={`Entrega grátis acima de ${formatCurrency(freeDeliveryAbove)}`}
+        >
+          entrega grátis acima de {formatCurrency(freeDeliveryAbove)}
+        </Badge>
+      )}
 
       <div className="flex items-center gap-1.5">
         <div className="flex items-center gap-1" title="Avaliação">
@@ -49,26 +69,26 @@ function RestaurantInfos({ restaurantData }: RestaurantInfosProps) {
             className="fill-yellow-500 text-yellow-500"
             aria-hidden
           />
-          <span className="text-xs font-bold text-neutral-500">
-            {restaurantData.rating} de 5
+          <span className="flex items-center text-xs font-bold text-neutral-500">
+            {rating} de 5 <ChevronRightIcon size={12} aria-hidden />
           </span>
         </div>
-        <span className="text-neutral-400">•</span>
+        <span className="text-xs text-neutral-400" aria-hidden>
+          •
+        </span>
         <span
           className={`text-xs font-bold ${
-            restaurantData.isOpen ? "text-green-500" : "text-red-500"
+            isOpen ? "text-green-500" : "text-red-500"
           }`}
         >
-          {restaurantData.isOpen
-            ? `fecha às ${restaurantData.closingTime}`
-            : "fechado"}
+          {isOpen ? `fecha às ${closingTime}` : "fechado"}
         </span>
       </div>
 
       <p className="text-xs font-bold text-neutral-500">
-        pedido mínimo: {formatCurrency(restaurantData.minOrder)}
+        pedido mínimo: {formatCurrency(minOrder)}
       </p>
-    </div>
+    </section>
   );
 }
 
