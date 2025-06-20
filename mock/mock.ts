@@ -26,7 +26,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -35,16 +35,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -65,6 +70,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -77,7 +87,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -85,16 +95,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -115,6 +130,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -127,7 +147,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -135,17 +155,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -165,6 +185,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -184,12 +209,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -197,11 +222,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -220,7 +250,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -277,11 +312,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -296,6 +331,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -329,6 +369,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -376,7 +421,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -385,16 +430,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -415,6 +465,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -427,7 +482,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -435,16 +490,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -465,6 +525,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -477,7 +542,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -485,17 +550,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -515,6 +580,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -534,12 +604,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -547,11 +617,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -570,7 +645,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -627,11 +707,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -646,6 +726,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -679,6 +764,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -726,7 +816,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -735,16 +825,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -765,6 +860,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -777,7 +877,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -785,16 +885,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -815,6 +920,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -827,7 +937,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -835,17 +945,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -865,6 +975,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -884,12 +999,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -897,11 +1012,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -920,7 +1040,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -977,11 +1102,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -996,6 +1121,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -1029,6 +1159,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -1076,7 +1211,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -1085,16 +1220,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1115,6 +1255,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1127,7 +1272,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -1135,16 +1280,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1165,6 +1315,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1177,7 +1332,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -1185,17 +1340,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -1215,6 +1370,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1234,12 +1394,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -1247,11 +1407,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1270,7 +1435,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -1327,11 +1497,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -1346,6 +1516,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -1379,6 +1554,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -1426,7 +1606,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -1435,16 +1615,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1465,6 +1650,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1477,7 +1667,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -1485,16 +1675,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1515,6 +1710,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1527,7 +1727,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -1535,17 +1735,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -1565,6 +1765,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1584,12 +1789,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -1597,11 +1802,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1620,7 +1830,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -1677,11 +1892,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -1696,6 +1911,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -1729,6 +1949,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -1776,7 +2001,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -1785,16 +2010,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1815,6 +2045,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1827,7 +2062,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -1835,16 +2070,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1865,6 +2105,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1877,7 +2122,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -1885,17 +2130,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -1915,6 +2160,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -1934,12 +2184,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -1947,11 +2197,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -1970,7 +2225,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -2027,11 +2287,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -2046,6 +2306,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -2079,6 +2344,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -2126,7 +2396,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -2135,16 +2405,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2165,6 +2440,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2177,7 +2457,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -2185,16 +2465,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2215,6 +2500,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2227,7 +2517,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -2235,17 +2525,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -2265,6 +2555,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2284,12 +2579,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -2297,11 +2592,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2320,7 +2620,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -2377,11 +2682,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -2396,6 +2701,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -2429,6 +2739,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -2476,7 +2791,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -2485,16 +2800,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2515,6 +2835,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2527,7 +2852,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -2535,16 +2860,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2565,6 +2895,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2577,7 +2912,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -2585,17 +2920,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -2615,6 +2950,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2634,12 +2974,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -2647,11 +2987,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2670,7 +3015,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -2727,11 +3077,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -2746,6 +3096,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -2779,6 +3134,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -2826,7 +3186,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -2835,16 +3195,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2865,6 +3230,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2877,7 +3247,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -2885,16 +3255,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -2915,6 +3290,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2927,7 +3307,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -2935,17 +3315,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -2965,6 +3345,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -2984,12 +3369,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -2997,11 +3382,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -3020,7 +3410,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -3077,11 +3472,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -3096,6 +3491,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -3129,6 +3529,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -3176,7 +3581,7 @@ const mockedData = [
             imageUrl: "/dishes/niguiri-salmao.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
                 promoPrice: 12.9,
               },
@@ -3185,16 +3590,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -3215,6 +3625,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -3227,7 +3642,7 @@ const mockedData = [
             isSpicy: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -3235,16 +3650,21 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -3265,6 +3685,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -3277,7 +3702,7 @@ const mockedData = [
             isVegetarian: true,
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 14.9,
               },
             ],
@@ -3285,17 +3710,17 @@ const mockedData = [
               {
                 id: "acc-shoyu",
                 name: "Shoyu Tradicional",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-gengibre",
                 name: "Gengibre em Conserva",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-wasabi",
                 name: "Wasabi",
-                price: 0.0,
+                price: 1.0,
               },
             ],
             extras: [
@@ -3315,6 +3740,11 @@ const mockedData = [
                 id: "cutlery-chopsticks",
                 name: "Hashis",
                 price: 0.0,
+              },
+              {
+                id: "cutlery-fork",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
               },
             ],
           },
@@ -3334,12 +3764,12 @@ const mockedData = [
             imageUrl: "/dishes/ceviche-salmao.webp",
             sizes: [
               {
-                name: "Porção Individual",
+                name: "médio",
                 price: 28.9,
                 promoPrice: 24.9,
               },
               {
-                name: "Porção Grande",
+                name: "grande",
                 price: 49.9,
               },
             ],
@@ -3347,11 +3777,16 @@ const mockedData = [
               {
                 id: "acc-torradas",
                 name: "Torradinhas",
-                price: 0.0,
+                price: 1.0,
               },
               {
                 id: "acc-molho-soja",
                 name: "Molho de Soja",
+                price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
                 price: 0.0,
               },
             ],
@@ -3370,7 +3805,12 @@ const mockedData = [
             cutlery: [
               {
                 id: "cutlery-fork",
-                name: "Garfo",
+                name: "Garfo e Faca Descartáveis",
+                price: 1.0,
+              },
+              {
+                id: "cutlery-hashi",
+                name: "Hashi",
                 price: 0.0,
               },
             ],
@@ -3427,11 +3867,11 @@ const mockedData = [
             imageUrl: "/dishes/harumaki-banana.webp",
             sizes: [
               {
-                name: "Porção (2 unidades)",
+                name: "pequeno",
                 price: 12.9,
               },
               {
-                name: "Porção (4 unidades)",
+                name: "médio",
                 price: 22.9,
                 promoPrice: 19.9,
               },
@@ -3446,6 +3886,11 @@ const mockedData = [
                 id: "acc-nutella",
                 name: "Nutella",
                 price: 2.5,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [
@@ -3479,6 +3924,11 @@ const mockedData = [
                 id: "acc-calda-chocolate",
                 name: "Calda de Chocolate",
                 price: 1.0,
+              },
+              {
+                id: "acc-sem-acompanhamento",
+                name: "Sem Acompanhamentos",
+                price: 0.0,
               },
             ],
             extras: [

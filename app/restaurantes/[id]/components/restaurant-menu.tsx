@@ -5,14 +5,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { CircleDollarSignIcon } from "lucide-react";
+import Link from "next/link";
 import DishIcons from "./dish/dish-icons";
 import DishPrice from "./dish/dish-price";
 
 type RestaurantMenuProps = {
   categories: Category[];
+  restaurantId: string;
 };
 
-function RestaurantMenu({ categories }: RestaurantMenuProps) {
+function RestaurantMenu({ categories, restaurantId }: RestaurantMenuProps) {
   return (
     <Accordion type="multiple" className="mt-4 w-full">
       {categories.map((category) => {
@@ -47,9 +49,10 @@ function RestaurantMenu({ categories }: RestaurantMenuProps) {
             <AccordionContent>
               <div className="flex flex-col gap-1">
                 {category.dishes.map((dish) => (
-                  <div
+                  <Link
                     key={dish.id}
-                    className="flex items-start justify-between rounded px-2 py-1 transition hover:bg-neutral-50"
+                    href={`/restaurantes/${restaurantId}/produtos/${dish.id}`}
+                    className="flex items-start justify-between rounded px-2 py-1 text-start transition hover:bg-neutral-50"
                   >
                     <div className="flex flex-col">
                       <span className="inline-flex items-center gap-0.5 text-sm font-semibold text-pretty text-neutral-900">
@@ -68,7 +71,7 @@ function RestaurantMenu({ categories }: RestaurantMenuProps) {
                     <div className="flex min-w-[90px] flex-col items-end">
                       <DishPrice sizes={dish.sizes} />
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </AccordionContent>

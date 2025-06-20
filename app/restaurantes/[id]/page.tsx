@@ -29,7 +29,10 @@ export default async function RestaurantPage({
       <RestaurantTitle restaurantData={restaurantData} />
       <RestaurantInfos restaurantData={restaurantData} />
 
-      <RestaurantMenu categories={restaurantData.categories} />
+      <RestaurantMenu
+        categories={restaurantData.categories}
+        restaurantId={restaurantData.id}
+      />
     </div>
   );
 }
