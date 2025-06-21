@@ -1,9 +1,49 @@
 import NotFound from "@/components/not-found";
 import { getRestaurantById } from "@/mock/mock";
+import type { Metadata } from "next";
 import Link from "next/link";
 import ProdutoForm from "./components/product-form";
 
 type Params = Promise<{ id: string; produtoId: string }>;
+
+export async function generateMetadata(props: {
+  params: Params;
+}): Promise<Metadata> {
+  const params = props.params;
+  const { id } = await params;
+
+  const { produtoId } = await params;
+  const restaurantData = getRestaurantById(id);
+  if (!restaurantData) {
+    return {
+      title: "Restaurante não encontrado",
+      description: "O restaurante que você está procurando não existe.",
+    };
+  }
+  const allCategories = restaurantData.categories;
+  const allDishes = allCategories.flatMap((cat) => cat.dishes);
+  const dish = allDishes.find((d) => d.id === produtoId);
+  if (!dish) {
+    return {
+      title: "Produto não encontrado",
+      description: "O produto que você está procurando não existe.",
+    };
+  }
+  return {
+    title: dish.name,
+    description: `Detalhes do produto ${dish.name} do restaurante ${restaurantData.name}`,
+    openGraph: {
+      title: dish.name,
+      description: `Detalhes do produto ${dish.name} do restaurante ${restaurantData.name}`,
+      images: [
+        {
+          url: dish.imageUrl,
+          alt: dish.name,
+        },
+      ],
+    },
+  };
+}
 
 async function ProdutoPage(props: { params: Params }) {
   const params = props.params;
