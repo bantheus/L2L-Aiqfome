@@ -41,6 +41,8 @@ O projeto conta com um design system, baseado em princípios de atomic design e 
 
 ## 🌐 Deploy
 
+https://l2-l-aiqfome.vercel.app/
+
 ## 🚀 Funcionalidades
 
 - ✅ Listagem de restaurantes abertos e fechados
