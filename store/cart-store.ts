@@ -10,7 +10,7 @@ export type CartItemDetails = {
   observation?: string;
 };
 
-type CartItem = {
+export type CartItem = {
   id: string;
   name: string;
   imageUrl: string;
@@ -20,18 +20,21 @@ type CartItem = {
   restaurantId: string;
 };
 
-type CartState = {
+export type CartState = {
   items: CartItem[];
   addItem: (item: CartItem) => void;
   removeItem: (id: string) => void;
   increment: (id: string) => void;
   decrement: (id: string) => void;
   clear: () => void;
+  getTotal: () => number;
+  getItem: (id: string) => CartItem | undefined;
+  getCount: () => number;
 };
 
 export const useCartStore = create<CartState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       items: [],
       addItem: (item) =>
         set((state) => {
@@ -66,9 +69,13 @@ export const useCartStore = create<CartState>()(
             .filter((i) => i.quantity > 0),
         })),
       clear: () => set({ items: [] }),
+      getTotal: () => get().items.reduce((sum, i) => sum + i.total, 0),
+      getItem: (id) => get().items.find((i) => i.id === id),
+      getCount: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
     }),
     {
       name: "cart-storage",
+      partialize: (state) => ({ items: state.items }),
     },
   ),
 );
