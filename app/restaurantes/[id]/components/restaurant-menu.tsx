@@ -16,7 +16,7 @@ type RestaurantMenuProps = {
 
 function RestaurantMenu({ categories, restaurantId }: RestaurantMenuProps) {
   return (
-    <Accordion type="multiple" className="mt-4 w-full">
+    <Accordion type="multiple" className="mt-4 w-full md:mt-6 lg:mt-8 xl:mt-10">
       {categories.map((category) => {
         const hasPromo = category.dishes.some((dish) =>
           dish.sizes.some(
@@ -27,8 +27,8 @@ function RestaurantMenu({ categories, restaurantId }: RestaurantMenuProps) {
         return (
           <AccordionItem key={category.id} value={category.id}>
             <AccordionTrigger>
-              <div>
-                <span className="flex items-center gap-2 text-base font-bold text-neutral-900">
+              <div className="flex flex-col gap-1 md:gap-1.5 lg:gap-2">
+                <span className="flex items-center gap-2 text-base font-bold text-neutral-900 md:text-lg lg:text-xl">
                   {category.name}
                   {hasPromo && (
                     <CircleDollarSignIcon
@@ -38,8 +38,9 @@ function RestaurantMenu({ categories, restaurantId }: RestaurantMenuProps) {
                     />
                   )}
                 </span>
+
                 {category.description && (
-                  <p className="text-xs font-semibold text-pretty text-neutral-500">
+                  <p className="text-xs font-semibold text-pretty text-neutral-500 md:text-sm lg:text-base">
                     {category.description}
                   </p>
                 )}
@@ -47,28 +48,30 @@ function RestaurantMenu({ categories, restaurantId }: RestaurantMenuProps) {
             </AccordionTrigger>
 
             <AccordionContent>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 md:gap-1.5 lg:gap-2">
                 {category.dishes.map((dish) => (
                   <Link
                     key={dish.id}
                     href={`/restaurantes/${restaurantId}/produtos/${dish.id}`}
-                    className="flex items-start justify-between rounded px-2 py-1 text-start transition hover:bg-neutral-50"
+                    className="flex items-start justify-between rounded px-2 py-1 text-start transition hover:bg-neutral-50 md:px-3 md:py-2 lg:px-4 lg:py-3"
                   >
-                    <div className="flex flex-col">
-                      <span className="inline-flex items-center gap-0.5 text-sm font-semibold text-pretty text-neutral-900">
+                    <div className="flex flex-col gap-0.5 md:gap-1">
+                      <span className="inline-flex items-center gap-0.5 text-sm font-semibold text-pretty text-neutral-900 md:text-base">
                         {dish.name}
                         <DishIcons
                           isSpicy={dish.isSpicy}
                           isVegetarian={dish.isVegetarian}
                         />
                       </span>
+
                       {dish.description && (
-                        <span className="line-clamp-2 text-xs text-neutral-500">
+                        <span className="line-clamp-2 text-xs text-neutral-500 md:text-sm">
                           {dish.description}
                         </span>
                       )}
                     </div>
-                    <div className="flex min-w-[90px] flex-col items-end">
+
+                    <div className="flex min-w-[90px] flex-col items-end md:min-w-[110px] lg:min-w-[130px]">
                       <DishPrice sizes={dish.sizes} />
                     </div>
                   </Link>
