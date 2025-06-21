@@ -14,7 +14,7 @@ export default async function RestaurantPage({
 
   if (!restaurantData) {
     return (
-      <div className="flex h-full items-center justify-center">
+      <div className="container mx-auto flex h-full items-center justify-center">
         <NotFound
           resourceName="Restaurante"
           backButtonLabel="Voltar para o início"
@@ -25,7 +25,7 @@ export default async function RestaurantPage({
   }
 
   return (
-    <div className="flex flex-col gap-1.5 p-4">
+    <div className="container mx-auto flex flex-col gap-1.5 p-4">
       <RestaurantTitle restaurantData={restaurantData} />
       <RestaurantInfos restaurantData={restaurantData} />
 
