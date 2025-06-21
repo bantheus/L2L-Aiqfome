@@ -27,23 +27,23 @@ function ProductDetail({ item, restaurant }: ProductDetailProps) {
       .flatMap((cat: Category) => cat.dishes) || [];
 
   return (
-    <div className="text-muted-foreground mt-1 flex flex-col gap-1 text-xs">
+    <div className="text-muted-foreground mt-1 flex flex-col gap-1 text-xs md:mt-2 md:gap-2 md:text-sm lg:mt-3 lg:gap-3 lg:text-base xl:mt-4 xl:gap-4 xl:text-lg">
       {item.details.size && (
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 md:gap-2">
           <span className="font-bold">• tamanho</span>
           <span className="ml-2 font-semibold">{item.details.size}</span>
         </div>
       )}
       {item.details.accompaniments &&
         item.details.accompaniments.length > 0 && (
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 md:gap-2">
             <span className="font-bold">• acompanhamentos</span>
             {item.details.accompaniments.map((aId: string) => {
               const acc = allAccompaniments.find((acc) => acc.id === aId);
               return (
                 <div
                   key={aId}
-                  className="flex items-center justify-between gap-3"
+                  className="flex items-center justify-between gap-3 md:gap-4"
                 >
                   {acc ? (
                     <>
@@ -64,14 +64,14 @@ function ProductDetail({ item, restaurant }: ProductDetailProps) {
           </div>
         )}
       {item.details.extras && item.details.extras.length > 0 && (
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 md:gap-2">
           <span className="font-bold">• mais alguma coisa?</span>
           {item.details.extras.map((eId: string) => {
             const extra = allExtras.find((ex) => ex.id === eId);
             return (
               <div
                 key={eId}
-                className="flex items-center justify-between gap-3"
+                className="flex items-center justify-between gap-3 md:gap-4"
               >
                 {extra ? (
                   <>
@@ -92,7 +92,7 @@ function ProductDetail({ item, restaurant }: ProductDetailProps) {
         </div>
       )}
       {item.details.drinks && Object.keys(item.details.drinks).length > 0 && (
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 md:gap-2">
           <span className="font-bold">• bebidas</span>
           {Object.entries(item.details.drinks).map(([drinkId, qty]) => {
             const drink = allDrinks.find((d) => d.id === drinkId);
@@ -100,7 +100,7 @@ function ProductDetail({ item, restaurant }: ProductDetailProps) {
             return qty > 0 && drink ? (
               <div
                 key={drinkId}
-                className="flex items-center justify-between gap-3"
+                className="flex items-center justify-between gap-3 md:gap-4"
               >
                 <span className="ml-2 lowercase">
                   {drink.name} {qty > 1 ? `x${qty}` : ""}
@@ -116,7 +116,7 @@ function ProductDetail({ item, restaurant }: ProductDetailProps) {
         </div>
       )}
       {item.details.observation && (
-        <div className="mt-1 rounded bg-neutral-50 p-1.5 text-xs text-neutral-700">
+        <div className="mt-1 rounded bg-neutral-50 p-1.5 text-xs text-neutral-700 md:mt-2 md:p-2 md:text-sm lg:mt-3 lg:p-3 lg:text-base">
           <span className="font-bold">observação:</span>{" "}
           <span className="font-semibold">{item.details.observation}</span>
         </div>

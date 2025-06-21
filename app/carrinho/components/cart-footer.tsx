@@ -4,7 +4,7 @@ import { formatCurrency } from "@/lib/format-currency";
 function CartFooter({ total }: { total: number }) {
   return (
     <div
-      className="sticky bottom-0 left-0 flex w-full items-center justify-between gap-3 rounded-t-md bg-white px-4 py-4"
+      className="sticky bottom-0 left-0 mt-4 flex w-full items-center justify-between gap-3 rounded-t-md bg-white px-4 py-4 md:mt-6"
       style={{ boxShadow: "0 -8px 24px -8px rgba(0,0,0,0.12)" }}
     >
       <div className="flex flex-col">
