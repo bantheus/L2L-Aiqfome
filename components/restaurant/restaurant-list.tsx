@@ -11,9 +11,9 @@ function RestaurantList({ title, restaurants }: RestaurantListProps) {
   }
 
   return (
-    <div className="p-4">
+    <div className="container mx-auto p-4">
       <h2 className="text-primary text-xl font-extrabold">{title}</h2>
-      <div className="mt-4 flex flex-col gap-4">
+      <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {restaurants.map((restaurant) => (
           <RestaurantItem key={restaurant.id} restaurant={restaurant} />
         ))}
