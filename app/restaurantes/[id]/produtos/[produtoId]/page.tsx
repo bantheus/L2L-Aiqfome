@@ -26,7 +26,7 @@ function ProdutoPage({ params }: PageProps) {
   const dish = allDishes.find((d) => d.id === params.produtoId);
   if (!dish) {
     return (
-      <div className="flex h-full items-center justify-center">
+      <div className="container mx-auto flex h-full items-center justify-center">
         <NotFound
           resourceName="Produto"
           backButtonLabel="Voltar para o início"
@@ -50,10 +50,10 @@ function ProdutoPage({ params }: PageProps) {
         isDrink={isDrink}
         restaurantId={params.id}
       />
-      <div className="w-full p-4">
+      <div className="container mx-auto w-full p-4 md:flex md:justify-center md:p-6">
         <Link
           href="/carrinho"
-          className="bg-primary hover:bg-primary/90 block w-full rounded-md py-3 text-center font-bold text-white"
+          className="bg-primary hover:bg-primary/90 block w-full rounded-md py-3 text-center font-bold text-white md:max-w-xs md:rounded-xl md:text-lg md:shadow-md md:transition-colors md:duration-300"
         >
           ver ticket
         </Link>

@@ -8,7 +8,7 @@ interface ObservationSectionProps {
 
 function ProductObservationSection({ field }: ObservationSectionProps) {
   return (
-    <section className="pb-16">
+    <section className="pb-16 md:pb-0">
       <FormItem className="px-4">
         <FormControl>
           <Textarea

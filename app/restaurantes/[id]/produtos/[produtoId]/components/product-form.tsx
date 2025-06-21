@@ -1,5 +1,6 @@
 "use client";
 
+import Separator from "@/components/separator";
 import { Form, FormField } from "@/components/ui/form";
 import { useProductFormLogic } from "@/hooks/useProductFormLogic";
 import { useCartStore, type CartItemDetails } from "@/store/cart-store";
@@ -35,8 +36,6 @@ function ProdutoForm({
   const [added, setAdded] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
-  const showSeparator = !isDrink;
-
   function getCartItemId(dish: Dish, values: CartItemDetails) {
     const size = values.size || "";
     const extras = (values.extras || []).sort().join("-");
@@ -59,7 +58,8 @@ function ProdutoForm({
   }
 
   return (
-    <main className="mx-auto max-w-lg bg-white p-0">
+    <main className="mx-auto flex max-w-lg flex-col gap-4 p-0 md:max-w-3xl md:gap-8 md:px-6 md:py-10 lg:max-w-4xl xl:max-w-5xl">
+      {/* Header */}
       <ProductHeader
         imageUrl={dish.imageUrl}
         name={dish.name}
@@ -69,25 +69,31 @@ function ProdutoForm({
 
       <Form {...form}>
         <form
-          className="mt-6 flex flex-col gap-4"
           onSubmit={form.handleSubmit(onSubmit)}
+          className="flex flex-col gap-4 md:gap-8"
         >
-          <ProductSummary
-            total={total}
-            isValid={form.formState.isValid}
-            isSubmitting={form.formState.isSubmitting}
-            quantity={quantity}
-            setQuantity={setQuantity}
-            added={added}
-            setAdded={setAdded}
-            onIncrement={() => increment(dish.id)}
-            onDecrement={() => decrement(dish.id)}
-          />
+          {/* Resumo */}
+          <div className="md:rounded-2xl md:border md:border-neutral-100 md:bg-neutral-50 md:p-6 md:shadow-sm">
+            <ProductSummary
+              total={total}
+              isValid={form.formState.isValid}
+              isSubmitting={form.formState.isSubmitting}
+              quantity={quantity}
+              setQuantity={setQuantity}
+              added={added}
+              setAdded={setAdded}
+              onIncrement={() => increment(dish.id)}
+              onDecrement={() => decrement(dish.id)}
+            />
+          </div>
+
+          <div className="md:hidden">
+            <Separator />
+          </div>
 
           {/* Tamanho */}
           {dish.sizes.length > 1 && (
-            <>
-              <div className="h-1 w-full bg-neutral-100" />
+            <div className="md:rounded-2xl md:border md:border-neutral-100 md:bg-white md:p-6 md:shadow-sm">
               <FormField
                 control={form.control}
                 name="size"
@@ -95,73 +101,105 @@ function ProdutoForm({
                   <ProductSizeSection sizes={dish.sizes} field={field} />
                 )}
               />
-            </>
+            </div>
           )}
 
-          {showSeparator && <div className="h-1 w-full bg-neutral-100" />}
+          {dish.sizes.length > 1 && (
+            <div className="md:hidden">
+              <Separator />
+            </div>
+          )}
 
           {/* Acompanhamentos */}
           {dish.accompaniments.length > 0 && (
-            <FormField
-              control={form.control}
-              name="accompaniments"
-              render={({ field }) => (
-                <ProductAccompanimentsSection
-                  accompaniments={dish.accompaniments}
-                  field={field}
-                />
-              )}
-            />
+            <div className="md:rounded-2xl md:border md:border-neutral-100 md:bg-white md:p-6 md:shadow-sm">
+              <FormField
+                control={form.control}
+                name="accompaniments"
+                render={({ field }) => (
+                  <ProductAccompanimentsSection
+                    accompaniments={dish.accompaniments}
+                    field={field}
+                  />
+                )}
+              />
+            </div>
           )}
 
-          {showSeparator && <div className="h-1 w-full bg-neutral-100" />}
+          {dish.accompaniments.length > 0 && (
+            <div className="md:hidden">
+              <Separator />
+            </div>
+          )}
 
           {/* Bebidas */}
           {!isDrink && drinks.length > 0 && (
-            <ProductDrinkSection
-              drinks={drinks}
-              drinkQuantities={drinkQuantities}
-              onDrinkChange={handleDrinkChange}
-            />
+            <div className="md:rounded-2xl md:border md:border-neutral-100 md:bg-white md:p-6 md:shadow-sm">
+              <ProductDrinkSection
+                drinks={drinks}
+                drinkQuantities={drinkQuantities}
+                onDrinkChange={handleDrinkChange}
+              />
+            </div>
           )}
 
-          {showSeparator && <div className="h-1 w-full bg-neutral-100" />}
+          {!isDrink && drinks.length > 0 && (
+            <div className="md:hidden">
+              <Separator />
+            </div>
+          )}
 
           {/* Talheres */}
           {dish.cutlery.length > 0 && (
-            <FormField
-              control={form.control}
-              name="cutlery"
-              render={({ field }) => (
-                <ProductCutlerySection
-                  cutleryList={dish.cutlery}
-                  field={field}
-                />
-              )}
-            />
+            <div className="md:rounded-2xl md:border md:border-neutral-100 md:bg-white md:p-6 md:shadow-sm">
+              <FormField
+                control={form.control}
+                name="cutlery"
+                render={({ field }) => (
+                  <ProductCutlerySection
+                    cutleryList={dish.cutlery}
+                    field={field}
+                  />
+                )}
+              />
+            </div>
           )}
 
-          {showSeparator && <div className="h-1 w-full bg-neutral-100" />}
+          {dish.cutlery.length > 0 && (
+            <div className="md:hidden">
+              <Separator />
+            </div>
+          )}
 
           {/* Extras */}
           {dish.extras.length > 0 && (
-            <FormField
-              control={form.control}
-              name="extras"
-              render={({ field }) => (
-                <ProductExtraSection extras={dish.extras} field={field} />
-              )}
-            />
+            <div className="md:rounded-2xl md:border md:border-neutral-100 md:bg-white md:p-6 md:shadow-sm">
+              <FormField
+                control={form.control}
+                name="extras"
+                render={({ field }) => (
+                  <ProductExtraSection extras={dish.extras} field={field} />
+                )}
+              />
+            </div>
           )}
 
-          {showSeparator && <div className="h-1 w-full bg-neutral-100" />}
+          {dish.extras.length > 0 && (
+            <div className="md:hidden">
+              <Separator />
+            </div>
+          )}
 
           {/* Observações */}
-          <FormField
-            control={form.control}
-            name="observation"
-            render={({ field }) => <ProductObservationSection field={field} />}
-          />
+          <div className="md:rounded-2xl md:border md:border-neutral-100 md:bg-white md:p-6 md:shadow-sm">
+            <FormField
+              control={form.control}
+              name="observation"
+              render={({ field }) => (
+                <ProductObservationSection field={field} />
+              )}
+            />
+          </div>
         </form>
       </Form>
     </main>
