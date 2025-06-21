@@ -3,12 +3,13 @@ import { getRestaurantById } from "@/mock/mock";
 import Link from "next/link";
 import ProdutoForm from "./components/product-form";
 
-type PageProps = {
-  params: { id: string; produtoId: string };
-};
+type Params = Promise<{ id: string; produtoId: string }>;
 
-function ProdutoPage({ params }: PageProps) {
-  const restaurant = getRestaurantById(params.id);
+async function ProdutoPage(props: { params: Params }) {
+  const params = props.params;
+  const id = (await params).id;
+  const produtoId = (await params).produtoId;
+  const restaurant = getRestaurantById(id);
   if (!restaurant) {
     return (
       <div className="flex h-full items-center justify-center">
@@ -23,7 +24,7 @@ function ProdutoPage({ params }: PageProps) {
 
   const allCategories = restaurant.categories;
   const allDishes = allCategories.flatMap((cat) => cat.dishes);
-  const dish = allDishes.find((d) => d.id === params.produtoId);
+  const dish = allDishes.find((d) => d.id === produtoId);
   if (!dish) {
     return (
       <div className="container mx-auto flex h-full items-center justify-center">
@@ -48,7 +49,7 @@ function ProdutoPage({ params }: PageProps) {
         dish={dish}
         drinks={drinks}
         isDrink={isDrink}
-        restaurantId={params.id}
+        restaurantId={id}
       />
       <div className="container mx-auto w-full p-4 md:flex md:justify-center md:p-6">
         <Link
