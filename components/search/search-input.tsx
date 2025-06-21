@@ -5,7 +5,7 @@ import { Input } from "../ui/input";
 function SearchInput() {
   return (
     <div className="bg-primary px-4 pb-4">
-      <div className="relative rounded-md bg-white">
+      <div className="relative container mx-auto max-w-xl rounded-md bg-white">
         <Input
           type="search"
           className="placeholder:text-muted-foreground pl-10 placeholder:text-sm focus:ring-white"
