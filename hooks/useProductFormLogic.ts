@@ -14,9 +14,9 @@ export function useProductFormLogic(dish: Dish, drinks: Dish[]) {
     () => Object.fromEntries(drinks.map((drink) => [drink.id, 0])),
     [drinks],
   );
-  const [drinkQuantities, setDrinkQuantities] = useState<{
-    [id: string]: number;
-  }>(initialDrinkQuantities);
+  const [drinkQuantities, setDrinkQuantities] = useState<
+    Record<string, number>
+  >(initialDrinkQuantities);
 
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
@@ -29,21 +29,21 @@ export function useProductFormLogic(dish: Dish, drinks: Dish[]) {
       drinks: {},
       observation: "",
     },
+    shouldUnregister: true,
   });
 
-  const selectedSize = useWatch({ control: form.control, name: "size" });
-  const selectedCutlery = useWatch({ control: form.control, name: "cutlery" });
   const rawAccompaniments = useWatch({
     control: form.control,
     name: "accompaniments",
   });
-  const rawExtras = useWatch({ control: form.control, name: "extras" });
-
   const selectedAccompaniments = useMemo(
     () => rawAccompaniments || [],
     [rawAccompaniments],
   );
+  const rawExtras = useWatch({ control: form.control, name: "extras" });
   const selectedExtras = useMemo(() => rawExtras || [], [rawExtras]);
+  const selectedSize = useWatch({ control: form.control, name: "size" });
+  const selectedCutlery = useWatch({ control: form.control, name: "cutlery" });
 
   const handleDrinkChange = useCallback(
     (id: string, delta: number) => {
@@ -63,38 +63,60 @@ export function useProductFormLogic(dish: Dish, drinks: Dish[]) {
   );
   const basePrice = sizeObj?.promoPrice ?? sizeObj?.price ?? 0;
 
-  const accompanimentsTotal = useMemo(() => {
-    return dish.accompaniments
-      .filter((acc) => selectedAccompaniments.includes(acc.id))
-      .reduce((sum, acc) => sum + (acc.price || 0), 0);
-  }, [dish.accompaniments, selectedAccompaniments]);
+  const accompanimentsTotal = useMemo(
+    () =>
+      dish.accompaniments
+        .filter((acc) => selectedAccompaniments.includes(acc.id))
+        .reduce((sum, acc) => sum + (acc.price || 0), 0),
+    [dish.accompaniments, selectedAccompaniments],
+  );
 
-  const extrasTotal = useMemo(() => {
-    return dish.extras
-      .filter((extra) => selectedExtras.includes(extra.id))
-      .reduce((sum, extra) => sum + (extra.price || 0), 0);
-  }, [dish.extras, selectedExtras]);
+  const extrasTotal = useMemo(
+    () =>
+      dish.extras
+        .filter((extra) => selectedExtras.includes(extra.id))
+        .reduce((sum, extra) => sum + (extra.price || 0), 0),
+    [dish.extras, selectedExtras],
+  );
 
   const cutleryTotal = useMemo(() => {
     const cutlery = dish.cutlery.find((c) => c.id === selectedCutlery);
     return cutlery?.price || 0;
   }, [dish.cutlery, selectedCutlery]);
 
-  const drinksTotal = useMemo(() => {
-    return drinks.reduce((sum, drink) => {
-      const price = drink.sizes[0]?.promoPrice ?? drink.sizes[0]?.price ?? 0;
-      const qty = drinkQuantities[drink.id] || 0;
-      return sum + price * qty;
-    }, 0);
-  }, [drinks, drinkQuantities]);
+  const drinksTotal = useMemo(
+    () =>
+      drinks.reduce((sum, drink) => {
+        const price = drink.sizes[0]?.promoPrice ?? drink.sizes[0]?.price ?? 0;
+        const qty = drinkQuantities[drink.id] || 0;
+        return sum + price * qty;
+      }, 0),
+    [drinks, drinkQuantities],
+  );
 
-  const total =
-    basePrice + accompanimentsTotal + extrasTotal + cutleryTotal + drinksTotal;
+  const total = useMemo(
+    () =>
+      basePrice +
+      accompanimentsTotal +
+      extrasTotal +
+      cutleryTotal +
+      drinksTotal,
+    [basePrice, accompanimentsTotal, extrasTotal, cutleryTotal, drinksTotal],
+  );
 
   return {
     form,
     drinkQuantities,
     handleDrinkChange,
     total,
+    selectedSize,
+    selectedCutlery,
+    selectedAccompaniments,
+    selectedExtras,
+    basePrice,
+    accompanimentsTotal,
+    extrasTotal,
+    cutleryTotal,
+    drinksTotal,
   };
 }
