@@ -2,6 +2,8 @@
 
 import { Form, FormField } from "@/components/ui/form";
 import { useProductFormLogic } from "@/hooks/useProductFormLogic";
+import { useCartStore, type CartItemDetails } from "@/store/cart-store";
+import { useState } from "react";
 import ProductAccompanimentsSection from "./product-accompaniment-section";
 import ProductCutlerySection from "./product-cutlery-section";
 import ProductDrinkSection from "./product-drink-section";
@@ -15,16 +17,45 @@ type ProdutoFormProps = {
   dish: Dish;
   drinks: Dish[];
   isDrink?: boolean;
+  restaurantId: string;
 };
 
-function ProdutoForm({ dish, drinks, isDrink }: ProdutoFormProps) {
+function ProdutoForm({
+  dish,
+  drinks,
+  isDrink,
+  restaurantId,
+}: ProdutoFormProps) {
   const { form, drinkQuantities, handleDrinkChange, total } =
     useProductFormLogic(dish, drinks);
+  const addItem = useCartStore((s) => s.addItem);
+  const increment = useCartStore((s) => s.increment);
+  const decrement = useCartStore((s) => s.decrement);
+
+  const [added, setAdded] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
   const showSeparator = !isDrink;
 
-  function onSubmit() {
-    alert("Produto adicionado ao pedido!\n");
+  function getCartItemId(dish: Dish, values: CartItemDetails) {
+    const size = values.size || "";
+    const extras = (values.extras || []).sort().join("-");
+    const accompaniments = (values.accompaniments || []).sort().join("-");
+    return [dish.id, size, extras, accompaniments].filter(Boolean).join("|");
+  }
+
+  function onSubmit(values: CartItemDetails) {
+    const cartItemId = getCartItemId(dish, values);
+    addItem({
+      id: cartItemId,
+      name: dish.name,
+      imageUrl: dish.imageUrl,
+      quantity,
+      total: total * quantity,
+      details: values,
+      restaurantId,
+    });
+    setAdded(true);
   }
 
   return (
@@ -36,17 +67,23 @@ function ProdutoForm({ dish, drinks, isDrink }: ProdutoFormProps) {
         sizes={dish.sizes}
       />
 
-      <ProductSummary
-        total={total}
-        isValid={form.formState.isValid}
-        isSubmitting={form.formState.isSubmitting}
-      />
-
       <Form {...form}>
         <form
           className="mt-6 flex flex-col gap-4"
           onSubmit={form.handleSubmit(onSubmit)}
         >
+          <ProductSummary
+            total={total}
+            isValid={form.formState.isValid}
+            isSubmitting={form.formState.isSubmitting}
+            quantity={quantity}
+            setQuantity={setQuantity}
+            added={added}
+            setAdded={setAdded}
+            onIncrement={() => increment(dish.id)}
+            onDecrement={() => decrement(dish.id)}
+          />
+
           {/* Tamanho */}
           {dish.sizes.length > 1 && (
             <>

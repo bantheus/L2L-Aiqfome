@@ -1,5 +1,6 @@
 import NotFound from "@/components/not-found";
 import { getRestaurantById } from "@/mock/mock";
+import Link from "next/link";
 import ProdutoForm from "./components/product-form";
 
 type PageProps = {
@@ -41,7 +42,24 @@ function ProdutoPage({ params }: PageProps) {
   const drinks = drinksCategory?.dishes ?? [];
   const isDrink = !!drinks.find((d) => d.id === dish.id);
 
-  return <ProdutoForm dish={dish} drinks={drinks} isDrink={isDrink} />;
+  return (
+    <>
+      <ProdutoForm
+        dish={dish}
+        drinks={drinks}
+        isDrink={isDrink}
+        restaurantId={params.id}
+      />
+      <div className="w-full p-4">
+        <Link
+          href="/carrinho"
+          className="bg-primary hover:bg-primary/90 block w-full rounded-md py-3 text-center font-bold text-white"
+        >
+          ver ticket
+        </Link>
+      </div>
+    </>
+  );
 }
 
 export default ProdutoPage;

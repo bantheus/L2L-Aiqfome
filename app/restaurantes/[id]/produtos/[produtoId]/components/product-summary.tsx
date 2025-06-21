@@ -1,33 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/format-currency";
 import { PlusCircle, Trash2 } from "lucide-react";
-import { useState } from "react";
 
 interface ProductSummaryBarProps {
   total: number;
   isValid: boolean;
   isSubmitting: boolean;
+  quantity: number;
+  setQuantity: (q: number) => void;
+  added: boolean;
+  setAdded: (a: boolean) => void;
+  onIncrement: () => void;
+  onDecrement: () => void;
 }
 
 function ProductSummary({
   total,
   isValid,
   isSubmitting,
+  quantity,
+  setQuantity,
+  added,
+  setAdded,
+  onIncrement,
+  onDecrement,
 }: ProductSummaryBarProps) {
-  const [added, setAdded] = useState(false);
-  const [quantity, setQuantity] = useState(1);
-
-  const handleAdd = () => {
-    setAdded(true);
-    setQuantity(1);
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+    onIncrement();
   };
-
-  const handleIncrement = () => setQuantity((q) => q + 1);
   const handleRemove = () => {
     if (quantity === 1) {
       setAdded(false);
+      onDecrement();
     } else {
-      setQuantity((q) => q - 1);
+      setQuantity(quantity - 1);
+      onDecrement();
     }
   };
 
@@ -38,7 +46,7 @@ function ProductSummary({
         <span className="text-sm text-neutral-500">
           total:{" "}
           <span className="text-sm font-bold text-neutral-700">
-            {formatCurrency(total)}
+            {formatCurrency(total * quantity)}
           </span>
         </span>
       </div>
@@ -47,7 +55,6 @@ function ProductSummary({
           type="submit"
           disabled={!isValid || isSubmitting}
           className="bg-neutral-500"
-          onClick={handleAdd}
         >
           adicionar
         </Button>
