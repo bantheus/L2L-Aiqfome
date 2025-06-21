@@ -14,7 +14,7 @@ export default function Header({
   address = "Rua Mandaguari, 198",
 }: HeaderProps) {
   return (
-    <header className="bg-primary top-0 z-50 w-full">
+    <header className="bg-primary top-0 w-full">
       <nav
         className="container mx-auto flex items-center justify-between p-4 text-white"
         aria-label="Navegação principal"
